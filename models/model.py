@@ -10,7 +10,7 @@ class User(Base):
     username = Column(String(20), unique=True)
     password = Column(String(20))
     # hashed_password = Column(String(50))
-    create_at = Column(DateTime(), default=datetime.now)
+    created_at = Column(DateTime(), default=datetime.now)
 
 
 class ShortenUrl(Base):
@@ -23,5 +23,5 @@ class ShortenUrl(Base):
     visits_count = Column(Integer, default=0)
     created_at = Column(DateTime(), default=datetime.now)
 
-    create_by = Column(Integer, ForeignKey("users.id"))
-    mes_content = Column(String, nullable=False)
+    created_by = Column(Integer, ForeignKey("users.id"))
+    msg_context = Column(String, nullable=False)
