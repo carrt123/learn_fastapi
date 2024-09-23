@@ -44,7 +44,7 @@ async def login(user_data: OAuth2PasswordRequestForm = Depends(), db_session: As
     # exp: 过期时间 expiration
     data = {
         'iss ': userinfo.username,
-        'sub': 'xiaozhongtongxue',
+        'sub': 'god',
         'username': userinfo.username,
         'admin': True,
         'exp': datetime.utcnow() + timedelta(minutes=15)
@@ -107,6 +107,7 @@ async def create_batch(*, file: UploadFile = File(...),
         batch_msg = contents.decode(encoding='utf-8').split("\n")
 
         # 构造短链的辅助函数
+
         def make_short_url(item):
             split_item = item.split("#")
             short_tag = generate_short_url()
