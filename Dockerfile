@@ -11,7 +11,7 @@ COPY . .
 RUN pip install -r requirements.txt
 
 # 暴露应用运行的端口
-EXPOSE 8000
+EXPOSE 5000
 
 # 启动命令
 CMD ["python", "app.py"]
