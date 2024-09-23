@@ -2,7 +2,7 @@
 FROM python:3.11-slim
 
 # 设置工作目录
-WORKDIR /app
+WORKDIR /shortlink
 
 # 复制当前目录下的所有文件到容器中的工作目录
 COPY . .
