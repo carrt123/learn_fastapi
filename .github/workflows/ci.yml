@@ -28,7 +28,7 @@ jobs:
           
       - name: Check FastAPI project build
         run : |
-          nohup python run app.py &
+          nohup python app.py &
           sleep 5
           until curl --fail http://127.1.1.1:5000/; do echo "Waiting for FastAPI to be ready..."; sleep 2; done
 
