@@ -2,7 +2,7 @@
 FROM python:3.11-slim
 
 # 设置工作目录
-WORKDIR /shortlink
+WORKDIR /myapp
 
 # 复制当前目录下的所有文件到容器中的工作目录
 COPY . .
@@ -11,7 +11,7 @@ COPY . .
 RUN pip install -r requirements.txt
 
 # 暴露应用运行的端口
-EXPOSE 5000
+EXPOSE 8080
 
 # 启动命令
 CMD ["python", "app.py"]
