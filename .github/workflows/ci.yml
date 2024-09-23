@@ -28,7 +28,7 @@ jobs:
           
       - name: Check FastAPI project build
         run : |
-          python run app.py
+          python app.py
           sleep 5
           curl --fail http://127.1.1.1:5000/
 

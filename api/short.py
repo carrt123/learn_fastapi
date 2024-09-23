@@ -22,3 +22,8 @@ async def short_redirect(*, short_tag: str, db_session: AsyncSession = Depends(g
     )
 
     return RedirectResponse(url=data.long_url)
+
+
+@router_short.get('/')
+async def short_index():
+    return PlainTextResponse("短链访问接口")
