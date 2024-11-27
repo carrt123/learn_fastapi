@@ -1,10 +1,10 @@
 from sqlalchemy import select, update, delete
 from sqlalchemy.ext.asyncio import AsyncSession
-from models.model import ShortenUrl
-from db.database import async_engine, Base
+from demo1.models.model import ShortenUrl
+from demo1.db.database import async_engine, Base
 from typing import List
 
-from schemas import SingleShortUrlCreate
+from demo1.schemas import SingleShortUrlCreate
 
 
 class ShortServeries:

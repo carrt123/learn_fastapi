@@ -1,15 +1,15 @@
 from fastapi import APIRouter, Depends, HTTPException
-from dependencies import get_db_session
-from db.database import AsyncSession
-from services.user import UserServeries
-from services.short import ShortServeries
+from demo1.dependencies import get_db_session
+from demo1.db.database import AsyncSession
+from demo1.services.user import UserServeries
+from demo1.services.short import ShortServeries
 from starlette.status import HTTP_401_UNAUTHORIZED
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from datetime import timedelta, datetime
-from utils.hash_helper import HashHelper
-from utils.auth_helper import AuthToeknHelper
-from utils.random_helper import generate_short_url
-from schemas import SingleShortUrlCreate
+from demo1.utils.hash_helper import HashHelper
+from demo1.utils.auth_helper import AuthToeknHelper
+from demo1.utils.random_helper import generate_short_url
+from demo1.schemas import SingleShortUrlCreate
 from fastapi import File, UploadFile
 
 router_user = APIRouter(prefix="/api/v1", tags=["用户创建短链管理"])

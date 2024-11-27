@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, BackgroundTasks
 from fastapi.responses import RedirectResponse, PlainTextResponse
 
-from dependencies import get_db_session
-from db.database import AsyncSession
-from services.short import ShortServeries
+from demo1.dependencies import get_db_session
+from demo1.db.database import AsyncSession
+from demo1.services.short import ShortServeries
 
 router_short = APIRouter(tags=["短链访问"])
 

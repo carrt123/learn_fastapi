@@ -1,7 +1,6 @@
-from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.ext.asyncio import AsyncSession
 from typing import AsyncGenerator
-from db.database import AsyncSessionLocal
+from demo1.db.database import AsyncSessionLocal
 from contextlib import asynccontextmanager
 
 

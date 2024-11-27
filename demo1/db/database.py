@@ -1,7 +1,7 @@
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import declarative_base, sessionmaker
 # URL地址格式
-from config.config import get_settings
+from demo1.config.config import get_settings
 # 创建异步引擎对象
 async_engine = create_async_engine(get_settings().ASYNC_DATABASE_URI, echo=False, future=True)
 # 创建ORM模型基类
